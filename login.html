@@ -5,6 +5,8 @@
   <title> Se connecter</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Page de connexion contenant le formulaire de connexion par email et mot de passe, ainsi qu'un mot de passe oublié et une checkbox remember me" />
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="scripts/jquery.js"></script>
@@ -15,108 +17,130 @@
       $('.carousel').carousel({
         interval: 4000
       })
-    });    
+    });
+
+
+    function ShowPassword() {
+      var x = document.getElementById("form1Example23");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
   </script>
+
+
+
+
 </head>
 
 
-  <body>
-    <header class="navbar navbar-expand-md" style="
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+  <header class="navbar navbar-expand-md" style="
     justify-content: space-between; background:rgb(9, 9, 148)">
-        <div class="navbar-brand d-flex flex-grow-1">
-            <a href="blog.html">
-                <img src="public/logo.svg" alt="site's Logo" width="90" height="72"
-                    class="d-inline-block align-text-top">
-            </a>
+    <div class="navbar-brand d-flex flex-grow-1">
+      <a href="index.html">
+        <img src="public/logo.svg" alt="site's Logo" width="90" height="72" class="d-inline-block align-text-top">
+      </a>
 
-        </div>
-        <!-- give the boostrap class to the next div to align it to the right of the nav-->
-        <div class="navbar-text d-flex flex-grow-1">
-            <p class="h1 text-white">Mon Blog</p>
-        </div>
+    </div>
+    <!-- give the boostrap class to the next div to align it to the right of the nav-->
+    <div class="navbar-text d-flex flex-grow-1">
+      <p class="h1 text-white">Mon Blog</p>
+    </div>
 
-        <a class=" btn btn-light me-auto mb-2 mb-lg-0" href="login.html">
-          Se connecter
-        </a>
-      </header>
-    
-<main class="container mt-5 mb-5 justify-content-center" style="min-height: 100vh;">
-  <div class="card" style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex align-items-center justify-content-center h-100">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="public/login.svg" alt="carrousel1" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="public/login2.svg" alt="carrousel2" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="public/login3.svg" alt="carrousel3" class="d-block w-100">
+    <a class=" btn btn-light me-auto mb-2 mb-lg-0" href="login.html">
+      Se connecter
+    </a>
+  </header>
+
+  <main class="container mt-5 mb-5 justify-content-center" style="min-height: 100vh;">
+    <div class="card" style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="public/login.svg" alt="carrousel1" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="public/login2.svg" alt="carrousel2" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="public/login3.svg" alt="carrousel3" class="d-block w-100">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-          <form action="blog.html">
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input autofocus required type="email"  id="form1Example13"
-                placeholder="Enter your email..." class="form-control form-control-lg" >
-              <label class="form-label font-weight-bold" for="form1Example13">Email address</label>
-            </div>
-
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-              <input type="password" required id="form1Example23" 
-                placeholder="Enter your password..." class="form-control form-control-lg" >
-              <label class="form-label font-weight-bold" for="form1Example23">Password</label>
-            </div>
-
-            <div class="d-flex justify-content-around align-items-center mb-4">
-              <!-- Checkbox -->
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked >
-                <label class="form-check-label" for="form1Example3"> Remember me
-                </label>
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form action="index.html">
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input autofocus required type="email" id="form1Example13" placeholder="Enter your email..."
+                  class="form-control form-control-lg">
+                <label class="form-label font-weight-bold" for="form1Example13">Email address</label>
               </div>
-              <a href="#!">Forgot password?</a>
-            </div>
 
-            <!-- Submit button -->
-            <button type="submit"  class="btn btn-primary btn-lg btn-block">Sign in</button>
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <div class="form-group icon-div" style="
+    display: flex;
+    align-items: baseline;
+">
+                  <input type="password" required id="form1Example23" placeholder="Enter your password..."
+                    class="form-control form-control-lg">
+                  <i class="far fa-eye" aria-label="montrer le mot de passe" tabindex="0" onclick="ShowPassword()"></i>
+                </div>
+                <label class="form-label font-weight-bold" for="form1Example23">Password</label>
+              </div>
 
-            <div class="divider d-flex align-items-center my-4">
-              <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-            </div>
+              <div class="d-flex justify-content-around align-items-center mb-4">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked>
+                  <label class="form-check-label" for="form1Example3"> Remember me
+                  </label>
+                </div>
+                <a href="#!">Forgot password?</a>
+              </div>
 
-            <a  class="btn btn-primary btn-lg btn-block"
-              style="background-color: #3b5998" href="#!" role="button">
-              <i aria-hidden="true" class="fab fa-facebook-f me-2"></i>Continue with Facebook
-            </a>
-            <a  class="btn btn-primary btn-lg btn-block"
-              style="background-color: #55acee" href="#!" role="button">
-              <i aria-hidden="true" class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
 
-          </form>
+              <div class="divider d-flex align-items-center my-4">
+                <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+              </div>
+
+              <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!" role="button">
+                <i aria-hidden="true" class="fab fa-facebook-f me-2"></i>Continue with Facebook
+              </a>
+              <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!" role="button">
+                <i aria-hidden="true" class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
-<footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top" style="background:rgb(9, 9, 148)">
-  <p class="col-md-4 mb-0 ">© 2022 MaCompagnie, Inc</p>
-  <a
+  <footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
+    style="background:rgb(9, 9, 148)">
+    <p class="col-md-4 mb-0 ">© 2022 MaCompagnie, Inc</p>
+    <a
       class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
       <img src="public/logo.svg" alt="site's Logo" width="72" height="57" class="d-inline-block align-text-top">
-  </a>
+    </a>
 
-  <ul class="nav col-md-4 text-white justify-content-end">
+    <ul class="nav col-md-4 text-white justify-content-end">
       <li class="text-white"><a href="login.html" class="text-white px-2 ">page de connexion</a></li>
-      <li class="text-white"><a href="blog.html" class="text-white px-2 ">page de menu</a></li>
-      <li class="text-white"><a href="article.html" class="text-white px-2 ">pade d'article</a></li>
-  </ul>
-</footer>
+      <li class="text-white"><a href="index.html" class="text-white px-2 ">page de menu</a></li>
+      <li class="text-white"><a href="article.html" class="text-white px-2 ">page d'article</a></li>
+      <li class="text-white"><a href="plan.html" class="text-white px-2 ">plan du site</a></li>
+    </ul>
+  </footer>
 </body>
+
 </html>
