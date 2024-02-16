@@ -24,28 +24,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
   <header class="navbar navbar-expand-md" style="
-    justify-content: space-between; background:rgb(9, 9, 148)">
-    <div class="navbar-brand d-flex flex-grow-1">
-      <a title="Page Principale" href="index.html">
-        <img src="public/logo.svg" alt="site's Logo" width="90" height="72" class="d-inline-block align-text-top">
+  justify-content: space-between; background:rgb(9, 9, 148)">
+      <div class="navbar-brand d-flex flex-grow-1">
+          <a title="Page Principale" aria-label="Retour vers Page Principale" href="index.html">
+              <img src="public/logo.svg" alt="site's Logo" width="90" height="72"
+                  class="d-inline-block align-text-top">
+          </a>
+
+      </div>
+      <!-- give the boostrap class to the next div to align it to the right of the nav-->
+      <div class="navbar-text d-flex flex-grow-1">
+          <p class="h1 text-white">Mon Blog : Article</p>
+      </div>
+
+      <a class=" btn btn-light me-auto mb-2 mb-lg-0" href="login.html">
+        Se connecter
       </a>
-
-    </div>
-    <!-- give the boostrap class to the next div to align it to the right of the nav-->
-    <div class="navbar-text d-flex flex-grow-1">
-      <p class="h1 text-white">Mon Blog : Connexion</p>
-    </div>
-
-    <a class=" btn btn-light me-auto mb-2 mb-lg-0" href="login.html">
-      Se connecter
-    </a>
-  </header>
+    </header>
 
   <main class="container mt-5 mb-5 justify-content-center" style="min-height: 100vh;">
     <div class="card" style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
       <div  class="container py-5 h-100">
         <div  class="row d-flex align-items-center justify-content-center h-100">
-          <div aria-hidden="true" id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div aria-hidden="true" id="carouselExampleSlidesOnly" class="carousel col-md-6 slide" data-bs-ride="carousel">
             <div aria-hidden="true" class="carousel-inner">
               <div class="carousel-item active">
                 <img aria-hidden="true" src="public/login.svg" alt="carrousel1" class="d-block w-100">

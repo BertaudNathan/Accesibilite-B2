@@ -14,7 +14,7 @@
     <header class="navbar navbar-expand-md" style="
     justify-content: space-between; background:rgb(9, 9, 148)">
         <div class="navbar-brand d-flex flex-grow-1">
-            <a title="Page Principale" href="index.html">
+            <a title="Page Principale" aria-label="Retour vers Page Principale" href="index.html">
                 <img src="public/logo.svg" alt="site's Logo" width="90" height="72"
                     class="d-inline-block align-text-top">
             </a>
@@ -30,7 +30,7 @@
         </a>
       </header>
     <main class="container mt-5 mb-5">
-        <div class="card md-5 p-2 border-black rounded shadow pb-2 pt-3">
+        <article class="card md-5 p-2 border-black rounded shadow pb-2 pt-3">
             <h1 class="text-center">Ceci est un titre</h1>
             <p>Ceci est sommes toutes une description. Je peux ainsi decrire le contenu de mon article et dire es choses pa tres utiles et combler la page. J'ecrit neanmoins en francais pour eviter de faire un lorem ipsum de golmons je pourrais egalement coller des tokens et des cles ssh pu prendre de la place mais il faudrait que je fasse des recherches ety j'ai un peu la flemme en vrai. Voila je pense avoir tout dit dans ma descritpion en tous cas je sais pas quoi rajouter.</p>
             <p>Posté le <time  datetime="2024-02-12">12/02/2024</time></p>
@@ -106,15 +106,15 @@
                       </tr>
                 </tfoot>
             </table>
-        </div>
-        <div>
+        </article>
+        <article>
             <h2>Commentaires</h2>
             <div class="card md-5 border-black rounded shadow pb-2 pt-3">
-                <p class="h5">David</p><p>Trop moche</p>
-                <p class="h5">Emma</p><p>La classe</p>
-                <p class="h5">Tueur d'enfants</p><p>Adresse ?</p>
+                <section><h5>David</h5><p>Trop moche</p></section>
+                <section><h5>Emma</h5><p>La classe</p></section>
+                <section><h5>Tueur d'enfants</h5><p>Adresse ?</p></section>
             </div>
-        </div>
+        </article>
     </main>
 
     <footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top" style="background:rgb(9, 9, 148)">
