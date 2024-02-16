@@ -13,23 +13,6 @@
   <script src="js/bootstrap.min.js"></script>
   <link rel="icon" type="image/png" href="public/logo.svg">
 
-  <script>
-    $(document).ready(function () {
-      $('.carousel').carousel({
-        interval: 4000
-      })
-    });
-
-
-    function ShowPassword() {
-      var x = document.getElementById("form1Example23");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }
-  </script>
 
 
 
@@ -92,7 +75,9 @@
 ">
                   <input type="password" required id="form1Example23" placeholder="Enter your password..."
                     class="form-control form-control-lg">
-                  <i class="far fa-eye" title="montrer le mot de passe" tabindex="0" onclick="ShowPassword()"></i>
+                    <button type="button" id="shPassword">
+                      <i class="far fa-eye" aria-hidden="true" ></i>
+                    </button>
                 </div>
                 <label class="form-label font-weight-bold" for="form1Example23">Password</label>
               </div>
@@ -144,6 +129,28 @@
       </ul>
     </nav>
   </footer>
+  <script>
+    $(document).ready(function () {
+      $('.carousel').carousel({
+        interval: 4000
+      })
+    });
+
+    document.getElementById('shPassword').addEventListener('click', ShowPassword);
+
+    function ShowPassword(e) {
+      e.preventDefault();
+      var x = document.getElementById("form1Example23");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+
+
+
 </body>
 
 </html>
